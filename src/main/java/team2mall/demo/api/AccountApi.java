@@ -1,2 +1,7 @@
-package team2mall.demo.api;public class AccountApi {
+package team2mall.demo.api;
+
+
+@requ
+public class AccountApi {
+
 }
