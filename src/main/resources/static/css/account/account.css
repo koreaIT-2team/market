@@ -1,7 +1,19 @@
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#account {
+    margin: 50px;
+    width: 450px;
+    height: 500px;
+    border: 1px solid #ccc;
+}
+
 .account-login {
-    position: relative;
-    width: 400px;
-    margin: 20px auto 50px;
+    margin: 40px 0px;
 }
 
 .login-title {
@@ -15,7 +27,7 @@
     clear: both;
     margin: 0;
     text-align: center;
-    font-size: 41px;
+    font-size: 30px;
     color: #333;
     font-weight: normal;
 }
@@ -25,13 +37,16 @@
     clear: both;
     margin: 0 0 10px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     color: #999;
     font-weight: normal;
 }
 
-
-
+.login-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .login-user fieldset .id,
 .login-user fieldset .password {
@@ -41,32 +56,29 @@
 }
 
 
-
 fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin-top: 30px;
     border: none;
     vertical-align: top;
-
-
-    position: relative;
 }
 .login-user fieldset input {
-    width: 396px;
-    height: 40px;
+    width: 390px;
+    height: 30px;
     line-height: 45px;
+
+    margin-top: 20px;
     border: none;
     border-bottom: 1px solid #ddd;
-    font-size: 16px !important;
-    text-indent: 10px;
-    letter-spacing: 0.1em;
-    transition: border-bottom .5s ease-in-out;
-
-    outline: none !important;
+    font-size: 14px;
 }
 
-.login-user fieldset input:hover {
+.login-user fieldset input:focus {
     border-bottom: #333;
 }
 
@@ -83,32 +95,23 @@ input[type=password] {
 }
 
 
-
-
 .login-btn {
-    display: block;
-    text-align: center;
-    height: 50px;
-    padding: 0 24px;
-    border: 1px solid #131719;
-    border-bottom-color: #0c0f10;
 
-    width: 100%;
+    margin-top: 20px;
+    height: 45px;
+    width: 80%;
     
     color: #fff;
-    background: #1e2427;
-    background: linear-gradient(to bottom,#262c2f 100%,#1e2427 100%);
+    background-color: #333;
     
-    font-size: 15px;
+    font-size: 13px;
     line-height: 47px;
 
 }
 
 .account-btn {
     display: block;
-    margin: 0 0 20px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    margin: 20px 0 20px 0;
     text-align: center;
 }
 

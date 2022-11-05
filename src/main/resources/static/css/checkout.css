@@ -69,6 +69,160 @@ header nav .nav{
     color: white;
 }
 
+/* 컨텐츠 css 부분 */
+
+/* 주문창 */
+
+article{ /* 임시 */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article #content{ /* 임시 */
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    margin: 20px auto;
+}
+.title h3{
+    font-size:14px;
+    color: gray;
+    margin-bottom : 10px;
+}
+
+.order-product {
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom: 40px;
+}
+
+.order-product thead th{
+    padding: 11px 0 10px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #353535;
+    font-weight: normal; 
+    background: #fbfafa;
+}
+.orderProduct-detail {
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+
+
+.orderProduct-detail td:first-child{
+    width: 27px;
+    height:37.5px;
+    text-align: center;
+}
+
+.orderProduct-detail td:nth-child(2){
+    width:92px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(3){
+    width:589px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(4){
+    width:98px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(5){
+    width:92px;
+    height: 96px;
+}
+
+.product-img {
+    width: 75px;
+    height: 75px;
+
+}
+
+
+.titleArea {
+    border-bottom: 2px solid gray;
+    height:40px;
+    margin-bottom: 25px;
+}
+
+.titleArea h3{
+    font-size: 25px;
+}
+
+.orderArea h3 {
+    font-size:14px;
+    color: gray;
+}
+
+.orderInfoInput {
+    font-size: 12px;
+    width: 100%;
+    position: relative;
+    margin: 10px 0 0;
+    border-collapse: collapse;
+}
+
+
+.orderInfoInput tbody th{
+    width: 150px;
+    padding: 11px 0 10px 18px;
+    border: 1px solid #dfdfdf;
+    border-left:none;
+    color: #353535;
+    text-align: left;
+    font-weight: normal;
+}
+
+.detailInput td {
+    padding: 11px 10px 10px;
+    border: 1px solid #dfdfdf;
+    border-right:none;
+    color: #353535;
+}
+
+.address-zonecode {
+    width: 10%;
+}
+
+.detailInput td input {
+    align-items: center;
+}
+
+.address-detail, .address-basic {
+    display:flex;
+    margin-top: 7px;
+    width: 30%;
+}
+
+.detailInput li {
+    color:gray;
+    font-weight: lighter;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+input {
+    border: 1px solid rgb(198,198,198);
+    padding: 3px;
+}
+
+/* 결제 */
+
+.kakaopay-button {
+    margin: 40px;
+    width: 400px;
+    height: 50px;
+}
+
+.kakaopay-button img {
+    width:400px;
+    height: 50px;
+
+}
+
 
 /* 스크롤 업 버튼  */
 article .view_up{
@@ -196,4 +350,9 @@ address h3{
 }
 address span{
     font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
