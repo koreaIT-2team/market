@@ -22,4 +22,8 @@ mybatis:
     - /mappers/*.xml
 
 
+file:
+  path:
+
+
 
