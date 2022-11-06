@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LogAop {
-    @Pointcut("execution(* com.stussy.stussyclone20220930junil.api.*Api.*(..))")
+    @Pointcut("execution(* team2mall.demo.api.*Api.*(..))")
     private void pointCut() {}
 
-    @Pointcut("@annotation(com.stussy.stussyclone20220930junil.aop.annotation.LogAspect)")
-    private void annotionPointCut() {}
+    @Pointcut("@annotation(team2mall.demo.aop.annotation.LogAspect)")
+    private void annotationPointCut() {}
 
-    @Around("annotionPointCut()")
+    @Around("annotationPointCut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         CodeSignature codeSignature = (CodeSignature) joinPoint.getSignature();
         String className = codeSignature.getDeclaringTypeName();

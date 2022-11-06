@@ -9,6 +9,7 @@ class CommonApi {
 
     getProductMstList() {
         let responseData = null;
+
         $.ajax({
             async: false,
             type: "get",
@@ -114,7 +115,6 @@ class Option {
         if(responseData != null) {
             if(responseData.length > 0) {
                 responseData.forEach(product => {
-                    console.log(product)
                     pdtMstSelect.innerHTML += `
                         <option value="${product.pdtId}">(${product.category})${product.pdtName}</option>
                     `;
@@ -168,6 +168,7 @@ class ProductImgFile {
 
     constructor() {
         this.addFileInputEvent();
+        this.addUploadEvent();
     }
 
     addUploadEvent() {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
-    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="/static/css/admin/admin-register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -25,26 +25,23 @@
             </div>
             <nav>
                 <ul class="nav">
-                    <li><button type="button">상품 조회</button></li>
-                    <li><button type="button">상품 등록</button></li>
-                    <li><button type="button">시스템 정보</button></li>
+                    <li><a href="/admin/product"><button type="button">PRODUCT LIST</button></a></li>
+                    <li><a href="/admin/register"><button type="button">PRODUCT REGISTER</button></a></li>
+                    <li><a href="/admin/register/dtl"><button type="button">PDT IMG REGISTER</button></a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="admin">
-                <h1 class="admin-title">ADMIN PRODUCT REGISTRATION</h1>
+                <h1 class="admin-title">상품 등록</h1>
                 <div class="admin-container">
                     <section class="admin-main">
                         <div class="regist-header">
-                            <select class="product-inputs product-category">
-                                
-                            </select>
+                            <select class="product-inputs product-category"></select>
                             <input type="text" class="product-inputs" placeholder="상품명">
                             <input type="number" min="100" step="100" class="product-inputs" placeholder="가격">
                         </div>
                         <button type="button" class="btn regist-button">등록하기</button>
-
                     </section>
                 </div>
             </div>
@@ -52,8 +49,6 @@
             <div class="view_up"> 
                 <button type="button"><i class="fa-solid fa-arrow-up"></i></button>
             </div>
-
-
         </main>
 
         <footer>
@@ -94,6 +89,6 @@
             </div>
         </footer>
     </div>
-    <script src="/static/js/admin/admin.js"></script>
+    <script src="/static/js/admin/admin-register.js"></script>
 </body>
 </html>

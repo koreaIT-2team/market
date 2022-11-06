@@ -110,7 +110,6 @@ class RegisterEventService {
 
         this.addCategorySelectEvent();
         this.addNameInputEvent();
-        this.addPriceInputEvent();
         this.addRegistButtonEvent();
     }
 
@@ -146,17 +145,18 @@ class RegisterEventService {
             const name = this.#nameInputObj.value;
             const price = this.#priceInputObj.value;
 
-            const productMst = new ProductMst(
-                category, name, price);
 
-            const pegisterApi = new ProductApi();
-            if(pegisterApi.createProductRequest(productMst.getObject())) {
+            const productMst = new ProductMst(category, name, price);
+
+            const registerApi = new ProductApi();
+            if(registerApi.createProductRequest(productMst.getObject())) {
                 alert("상품 등록 완료");
                 location.reload();
             }
         }
     }
 }
+
 
 class RegisterService { 
     static #instance = null;
@@ -180,7 +180,7 @@ class RegisterService {
         const productCategoryList = commonApi.getCategoryList();
 
         const productCategory = document.querySelector(".product-category");
-        productCategory.innerHTML = `<option value="none">상품 종류</option><option value="1">test</option>`;
+        productCategory.innerHTML = `<option value="none">상품 종류</option>`;
 
         productCategoryList.forEach(category => {
             productCategory.innerHTML += `
