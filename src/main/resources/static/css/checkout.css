@@ -213,12 +213,13 @@ input {
 
 .kakaopay-button {
     margin: 40px;
-    width: 400px;
+    width: 100px;
     height: 50px;
+    border: none;
 }
 
 .kakaopay-button img {
-    width:400px;
+    width: 100%;
     height: 50px;
 
 }
