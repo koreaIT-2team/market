@@ -32,4 +32,9 @@ public class ProductController {
         return "product-category";
     }
 
+    @GetMapping("/checkout")
+    public String checkOut () {
+        return "checkout";
+    }
+
 }
