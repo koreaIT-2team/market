@@ -71,7 +71,7 @@ header nav .nav{
 
 
 /* 스크롤 업 버튼  */
-article .view_up{
+.view_up{
     position: fixed;
     right: 70px;
     bottom: 50px;
