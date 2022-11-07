@@ -1,10 +1,29 @@
 
-//스크롤 상단이동
-const $topBtn = document.querySelector(".view_up");
+//more 버튼 클릭시 각 카테고리 페이지로 이동
 
-$topBtn.onclick = () => {
-    window.scrollTo({top:0, behavior: "smooth"});
+const moreProductButton = document.querySelectorAll(".more");
+
+moreProductButton[0].onclick = () => {
+    location.href = "/collections/outer";
 }
+
+moreProductButton[1].onclick = () => {
+    location.href = "/collections/top";
+}
+
+moreProductButton[2].onclick = () => {
+    location.href = "/collections/bottom";
+}
+
+moreProductButton[3].onclick = () => {
+    location.href = "/collections/headwear";
+}
+
+moreProductButton[4].onclick = () => {
+    location.href = "/collections/acc";
+}
+
+//상품 선택시 디테일페이지 불러오기 
 
 
 

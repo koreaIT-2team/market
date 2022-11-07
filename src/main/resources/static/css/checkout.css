@@ -85,16 +85,75 @@ article #content{ /* 임시 */
     height: 800px;
     margin: 20px auto;
 }
+.title h3{
+    font-size:14px;
+    color: gray;
+    margin-bottom : 10px;
+}
 
-.titleArea{
-    border-bottom: 2px solid black;
-    font-size: larger;
+.order-product {
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom: 40px;
+}
+
+.order-product thead th{
+    padding: 11px 0 10px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #353535;
+    font-weight: normal; 
+    background: #fbfafa;
+}
+.orderProduct-detail {
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+
+
+.orderProduct-detail td:first-child{
+    width: 27px;
+    height:37.5px;
+    text-align: center;
+}
+
+.orderProduct-detail td:nth-child(2){
+    width:92px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(3){
+    width:589px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(4){
+    width:98px;
+    height: 96px;
+}
+.orderProduct-detail td:nth-child(5){
+    width:92px;
+    height: 96px;
+}
+
+.product-img {
+    width: 75px;
+    height: 75px;
+
+}
+
+
+.titleArea {
+    border-bottom: 2px solid gray;
     height:40px;
-    margin: 0 0 15px;
+    margin-bottom: 25px;
+}
+
+.titleArea h3{
+    font-size: 25px;
 }
 
 .orderArea h3 {
-    font-size:11px;
+    font-size:14px;
     color: gray;
 }
 
@@ -103,6 +162,7 @@ article #content{ /* 임시 */
     width: 100%;
     position: relative;
     margin: 10px 0 0;
+    border-collapse: collapse;
 }
 
 
@@ -149,10 +209,23 @@ input {
     padding: 3px;
 }
 
+/* 결제 */
+
+.kakaopay-button {
+    margin: 40px;
+    width: 400px;
+    height: 50px;
+}
+
+.kakaopay-button img {
+    width:400px;
+    height: 50px;
+
+}
 
 
 /* 스크롤 업 버튼  */
-article .view_up{
+.view_up{
     position: fixed;
     right: 70px;
     bottom: 50px;

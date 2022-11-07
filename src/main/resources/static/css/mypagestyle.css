@@ -82,12 +82,16 @@ article #content{ /* 임시 */
 
 /* mypage */
 
-.titleArea{
-    border-bottom: 2px solid black;
-    font-size: larger;
+.titleArea {
+    border-bottom: 2px solid gray;
     height:40px;
-    margin: 0 0 15px;
+    margin-bottom: 25px;
 }
+
+.titleArea h3{
+    font-size: 25px;
+}
+
 .membershiptier_bg{
     width:100%;
     height:100px;
@@ -150,9 +154,6 @@ article #content{ /* 임시 */
     font-size:small;
 }
 
-ul {
-    
-}
 
 /* .mileage ul li {
     float: left;

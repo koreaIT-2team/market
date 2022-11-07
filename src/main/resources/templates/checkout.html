@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>h-f</title>
+    <title>checkout</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
     <link rel="stylesheet" href="/static/css/checkout.css" type="text/css">
     <link rel="stylesheet" href="/static/css/mypagebasic.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 </head>
 <body>
     <div id="container">
@@ -36,11 +37,36 @@
                 </ul>
             </nav>
         </header>
-        <!-- 마이페이지  -->
+        <!-- 주문내용  -->
         <article>
             <div id="content">
                 <div class="titleArea">
                     <h3>&nbsp주문</h3>
+                </div>
+                <div>
+                    <div class="title">
+                        <h3>구매하실 상품</h3>
+                    </div>
+                    <table class="order-product">
+                        <thead>
+                            <tr class="orderProduct-title">
+                                <th><input type="checkbox"></th>
+                                <th>이미지</th>
+                                <th>상품명</th>
+                                <th>배송비</th>
+                                <th>가격</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="orderProduct-detail">
+                                <td><input type="checkbox"></td>
+                                <td><img class="product-img" src="/static/images/outer/outer (1).jpg" alt=""></td>
+                                <td class="product-name" th:text="${data.pdtName}"></td>
+                                <td>배송비</td>
+                                <td>가격</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="orderArea">
                     <div class="title">
@@ -77,37 +103,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="addressArea">
-                    <table class="orderInfoInput_scnd">
-                        <tbody class="detailInput">
-                            <tr>
-                                <th>주문하시는 분</th>
-                                <td>
-                                    <input type="text" placeholder="성명" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>주소</th>
-                                <td>
-                                    <input type="text" class="address-zonecode" placeholder="우편번호" disabled>
-                                    <button type="button" class="address-button">주소찾기</button>
-                                    <input type="text" class="address-basic" placeholder="기본 주소">
-                                    <input type="text" class="address-detail" placeholder="상세 주소">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>휴대전화</th>
-                                <td><input type="text" placeholder="전화번호"></td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td><input type="text" placeholder="이메일">
-                                    <li>- 이메일을 통해 주문처리과정을 보내드립니다.</li>
-                                    <li>- 이메일 주소란에는 반드시 수신가능한 이메일주소를 입력해 주세요</li>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div>
+                    <button type="button" class="kakaopay-button"><img src="/static/images/etc/kakaopay.png"></button>
                 </div>
             </div>
         </article>
@@ -150,5 +147,6 @@
         </footer>
     </div>
     <script src="/static/js/address.js"></script>
+    <script src="/static/js/checkout.js"></script>
 </body>
 </html>

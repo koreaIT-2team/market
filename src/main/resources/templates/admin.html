@@ -20,7 +20,7 @@
                     <li><button type="button">1:1 고객센터</button> </li>
                 </ul>
                 <div class="h_main">
-                    <a href="http://localhost:8000/lakickz/main"><img src="/static/images/logo.png" alt="logo"></a>
+                    <a href="/main"><img src="/static/images/logo.png" alt="logo"></a>
                 </div>
             </div>
             <nav>
@@ -32,16 +32,45 @@
             </nav>
         </header>
         <article>
-            <div class="admin-main">
-                <select class="product-inputs">
-                    <option value="none">상품 종류</option>
-                    <option value="">OUTER</option>
-                    <option value="">TOP</option>
-                    <option value="">BOTTOM</option>
-                    <option value="">HEADWEAR</option>
-                    <option value="">ACCESSORY</option>
-                </select>
+            <div class="register-title">
+                <h2>PRODUCT REGIST</h2>
             </div>
+            <section class="admin-main">
+                <div>
+                    <label for="product-select">상품선택</label>
+                    <select id="product-select" class="product-select"></select>
+                </div>
+                <div>
+                    <label for="product-size">사이즈</label>
+                    <select id="product-size" class="product-size"></select>
+                </div>
+                <div>
+                    <label for="product-color">색상</label>
+                    <input type="text" id="product-color" class="product-color">
+                </div>
+                <div>
+                    <label for="product-color">수량</label>
+                    <input type="number" id="product-stock" class="product-stock">
+                </div>
+
+                <button class="btn regist-button">추가</button>
+
+                <form enctype="multipart/form-data">
+                    <input type="file" class="files-input" name="files" multiple>
+                </form>
+                <button class="btn regist-button img-add-button">사진등록</button>
+                <ul class="file-list">
+                    <li class="file-info">
+                        <div class="file-img">
+                            <img src="/static/images/product/1924840_PUTT_1_720x.png" alt="">
+                        </div>
+                        <div class="file-name">파일명.png</div>
+                        <button type="button" class="btn delete-button">삭제</button>
+                    </li>
+                </ul>
+                <button class="btn regist-button upload-button">사진저장</button>
+            </section>
+
             <!-- 스크롤 위로 올리는 div -->
             <div class="view_up"> 
                 <button type="button"><i class="fa-solid fa-arrow-up"></i></button>
@@ -85,6 +114,5 @@
             </div>
         </footer>
     </div>
-    <script src="/static/js/head-footer.js"></script>
 </body>
 </html>
